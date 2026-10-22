@@ -61,6 +61,28 @@ const observer = new IntersectionObserver((entries) => {
 revealEls.forEach(el => observer.observe(el));
 
 // Contact form (client-side only demo)
+
+function bookViaWhatsApp({ name, phone, email, service, date, time }) {
+  // Replace with Tersi Clinic's WhatsApp number
+  const clinicNumber = "918123512696";
+
+  const message = `Hello Tersi Clinic,
+I would like to book an appointment.
+
+Patient Name: ${name}
+Patient Phone: ${phone}
+Patient Email: ${email}
+Service: ${service}
+Preferred Date: ${date}
+Preferred Time: ${time}
+
+Please confirm my appointment.`;
+
+  const url = `https://wa.me/${clinicNumber}?text=${encodeURIComponent(message)}`;
+
+  window.location.href = url;
+}
+
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
 if (form) {
@@ -68,7 +90,22 @@ if (form) {
     e.preventDefault();
     const name = form.name.value.trim();
     if (!name) return;
-    formNote.textContent = `Thank you, ${name}! Your request has been received. We'll contact you shortly.`;
+
+    const phone = form.phone.value.trim();
+    const email = form.email.value.trim();
+    const service = form.treatment.value.trim();
+    const date = form.date.value.trim();
+    const time = form.time.value.trim();
+    bookViaWhatsApp({
+      name,
+      phone,
+      email,
+      service,
+      date,
+      time
+    });
+
+    formNote.textContent = `WhatsApp is opening. Please send the message to request your appointment.`;
     form.reset();
   });
 }

@@ -3,11 +3,45 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dr. Vinod Gupta | Advanced Dermatology & Aesthetic Clinic</title>
-<meta name="description" content="Dr. Vinod Gupta - Consultant Dermatologist specializing in Pico Laser, AI Skin Analysis and MNRF Microneedling treatments." />
+<title>Tersi Clinic Skin | Hair | Laser &amp;  Clinic in Navi Mumbai</title>
+<meta name="description" content="Tersi Clinic, Navi Mumbai. Led by Dr. Vinod Gupta. Pico Laser, AI skin analysis, MNRF microneedling, acne, pigmentation and hair care. Book a consultation." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/clinic-additions.css" />
+
+<!-- Helps Google show the clinic in local search. Update details if anything changes. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Tersi Clinic",
+  "medicalSpecialty": "Cosmetology",
+  "telephone": "+918123512696",
+  "email": "vinod369iii@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Near Shiv Sena Branch, Opposite 90's Cake Shop, Ishwar Nagar, Kalwa",
+    "addressLocality": "Navi Mumbai",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "13:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "18:00",
+      "closes": "22:30"
+    }
+  ],
+  "employee": { "@type": "Physician", "name": "Dr. Vinod Gupta", "medicalSpecialty": "Cosmetology" }
+}
+</script>
 </head>
 <body>
 
@@ -17,20 +51,29 @@
 <!-- ===== Header ===== -->
 <header id="header">
   <div class="container nav-wrap">
-    <a href="#home" class="logo">Dr. Vinod <span>Gupta</span></a>
+    <!-- CLINIC NAME: change "Gupta Skin Clinic" here, in the footer, <title> and the JSON-LD above if you prefer another name -->
+    <!-- <a href="#home" class="logo">Tersi <span>Clinic</span> -->
+      <a href="#home" class="logo">
+        <img src="assets/clinic/logo.png" class="logo-mark" alt="Tersi Clinic logo" >
+        <!-- <link rel="icon" href="assets/clinic/logo.png" type="image/png"> -->
+        <!-- <svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true"> -->
+        <!-- <circle cx="24" cy="24" r="23" fill="#2f6f6b"/>
+        <path d="M24 9c-5 6.5-8 10.5-8 15a8 8 0 0 0 16 0c0-4.500-3-8.500-8-15z" fill="#faf8f6"/>
+        <path d="M34 8l1.500 3.500L39 13l-3.500 1.500L34 18l-1.500-3.500L29 13l3.500-1.500z" fill="#d4a373"/>
+      </svg> -->
+      Tersi <span>Clinic</span>
+      <small class="logo-tagline">Skin, Hair &amp; Laser</small>
+    </a>
     <nav id="nav">
       <ul>
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#technology">Technology</a></li>
         <li><a href="#services">Treatments</a></li>
-        <li><a href="#results">Results</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Results</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <a href="#contact" class="btn btn-small nav-cta">Book Consultation</a>
+    <a href="#contact" class="btn btn-primary btn-small nav-cta">Book Consultation</a>
     <button id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -40,27 +83,44 @@
   <div class="hero-bg"></div>
   <div class="container hero-inner">
     <div class="hero-text" data-reveal>
-      <p class="eyebrow">MD Dermatology · Aesthetic &amp; Laser Specialist</p>
-      <h1>Advanced Skin Care, <span class="highlight">Powered by Technology</span></h1>
-      <p class="hero-sub">Combining board-certified dermatology expertise with next-gen tools — Pico Laser, AI-driven skin analysis and MNRF microneedling — for visible, lasting results.</p>
+      <p class="eyebrow">Cosmetology and laser clinic in Dighe, Navi Mumbai</p>
+      <h1>Advanced Skin Clinic, <span class="highlight">Led by Dr. Vinod Gupta</span></h1>
+      <p class="hero-sub">Doctor-led care for your skin, with Pico Laser, AI skin analysis and MNRF microneedling, for visible, lasting results.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Book a Consultation</a>
         <a href="#services" class="btn btn-outline">Explore Treatments</a>
       </div>
-      <div class="hero-stats">
-        <div><strong>12+</strong><span>Years Experience</span></div>
-        <div><strong>8,500+</strong><span>Patients Treated</span></div>
-        <div><strong>4.9/5</strong><span>Patient Rating</span></div>
-      </div>
+
+      <ul class="hero-info">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span>Near Shiv Sena Branch, Opposite 90's Cake Shop, Ishwar Nagar, Kalwa, Navi Mumbai, Maharashtra</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span>Open daily: 10:00 AM to 1:30 PM and 6:00 PM to 10:30 PM</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          <span><a href="tel:+918123512696">+91 8123512696</a></span>
+        </li>
+      </ul>
     </div>
     <div class="hero-visual" data-reveal>
       <div class="hero-card floating">
-        <img src="assets/images/doctor-hero.jpg" alt="Dr. Vinod Gupta, Consultant Dermatologist" class="hero-photo">
+        <img src="assets/images/doctor-hero.jpg" alt="Dr. Vinod Gupta, Consultant Dermatologist at Gupta Skin Clinic" class="hero-photo">
+        <!-- The scan line is the animated line across the photo. Delete this div to remove it. -->
         <div class="scan-line"></div>
       </div>
-      <div class="badge-chip chip-1">✨ Pico Laser</div>
-      <div class="badge-chip chip-2">🔬 AI Skin Analysis</div>
-      <div class="badge-chip chip-3">📈 MNRF Microneedling</div>
+      <div class="badge-chip chip-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>Pico Laser
+      </div>
+      <div class="badge-chip chip-2">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3"/><circle cx="12" cy="12" r="3"/></svg>AI Skin Analysis
+      </div>
+      <div class="badge-chip chip-3">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/></svg>MNRF Microneedling
+      </div>
     </div>
   </div>
   <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
@@ -70,22 +130,49 @@
 <section id="about" class="about">
   <div class="container about-grid">
     <div class="about-media" data-reveal>
-      <img src="assets/images/doctor-about.jpg" alt="Dr. Vinod Gupta in clinic" class="about-photo">
-      <div class="exp-badge"><strong>12+</strong><span>Years of<br/>Clinical Excellence</span></div>
+      <img src="assets/images/doctor-about.jpg" alt="Dr. Vinod Gupta in the clinic" class="about-photo">
+      <!-- <div class="exp-badge"><strong>3+</strong><span>Years of<br/>Clinical Excellence</span></div> -->
     </div>
     <div class="about-content" data-reveal>
-      <p class="eyebrow">About the Doctor</p>
-      <h2>Blending Clinical Expertise with Cutting-Edge Innovation</h2>
-      <p>Dr. Vinod Gupta is a board-certified Consultant Dermatologist with over 12 years of experience in medical and cosmetic dermatology. He is known for a technology-first approach — continuously adopting the latest FDA/CE-approved devices to deliver safer, faster and more precise treatments.</p>
+      <p class="eyebrow">About the Clinic</p>
+      <h2>A Modern Skin Clinic, Led by Dr. Vinod Gupta</h2>
+      <p>Tersi Clinic offers medical and cosmetic dermatology under one roof, from acne and hair loss to laser and microneedling treatments.</p>
+      <p>Dr. Vinod Gupta is a Cosmetologist with experience in medical and cosmetic dermatology. He is known for a technology-first approach, continuously adopting the latest FDA/CE-approved devices to deliver safer, faster and more precise treatments.</p>
       <ul class="about-list">
-        <li><span class="tick">✓</span> MD Dermatology, Venereology &amp; Leprosy</li>
-        <li><span class="tick">✓</span> Fellowship in Aesthetic &amp; Laser Medicine</li>
-        <li><span class="tick">✓</span> Certified trainer on Pico Laser &amp; MNRF systems</li>
-        <li><span class="tick">✓</span> Member, Association of Cosmetic Dermatologists</li>
+        <!-- <li><span class="tick">✓</span> MD Dermatology, Venereology &amp; Leprosy</li> -->
+        <li><span class="tick">✓</span> Fellowship in Facial Aesthetics and Cosmetology &amp; Laser Medicine</li>
+        <li><span class="tick">✓</span> Experienced in Pico Laser &amp; MNRF systems</li>
+        <!-- <li><span class="tick">✓</span> Member, Association of Cosmetic Dermatologists</li> -->
+        <!-- ADD YOUR MEDICAL COUNCIL REGISTRATION NUMBER HERE, for example:
+        <li><span class="tick">✓</span> Registration No. XXXXX (Karnataka Medical Council)</li> -->
       </ul>
       <div class="about-cta">
         <a href="#contact" class="btn btn-primary">Schedule a Visit</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Clinic tour =====
+  Add photos to assets/clinic/ using the filenames below. A missing photo
+  shows a soft green placeholder instead of a broken image. -->
+<section id="clinic" class="clinic-tour">
+  <div class="container">
+    <p class="eyebrow center">Visit the Clinic</p>
+    <h2 class="center">A Calm, Clean Space for Your Treatment</h2>
+    <div class="tour-grid">
+      <figure class="tour-card" data-reveal>
+        <img src="assets/clinic/waiting-area.png" alt="Pateint waiting area at Tersi Clinic" loading="lazy" onerror="this.remove()">
+        <figcaption>Pateint waiting area</figcaption>
+      </figure>
+      <figure class="tour-card" data-reveal>
+        <img src="assets/clinic/treatment-room.png" alt="Treatment room with examination bed" loading="lazy" onerror="this.remove()">
+        <figcaption>Treatment room</figcaption>
+      </figure>
+      <figure class="tour-card" data-reveal>
+        <img src="assets/clinic/devices.png" alt="Laser and skin analysis devices at the clinic" loading="lazy" onerror="this.remove()">
+        <figcaption>Laser and analysis devices</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -99,7 +186,7 @@
       <div class="tech-card" data-reveal>
         <div class="tech-photo"><img src="assets/images/pico-laser.jpg" alt="Pico Laser treatment in progress"></div>
         <h3>Pico Laser</h3>
-        <p>Ultra-fast picosecond pulses shatter pigment &amp; stimulate collagen with minimal downtime — ideal for tattoo removal, melasma and skin rejuvenation.</p>
+        <p>Ultra-fast picosecond pulses shatter pigment &amp; stimulate collagen with minimal downtime, ideal for tattoo removal, melasma and skin rejuvenation.</p>
       </div>
       <div class="tech-card" data-reveal>
         <div class="tech-photo"><img src="assets/images/skin-analyser.jpg" alt="Digital skin analysis using AI-powered dermatoscope"></div>
@@ -109,7 +196,7 @@
       <div class="tech-card" data-reveal>
         <div class="tech-photo"><img src="assets/images/mnrf.jpg" alt="MNRF microneedling radiofrequency treatment"></div>
         <h3>MNRF Microneedling</h3>
-        <p>Micro-needling Radiofrequency delivers controlled thermal energy deep into the skin — remodelling collagen for scars, laxity and enlarged pores.</p>
+        <p>Micro-needling Radiofrequency delivers controlled thermal energy deep into the skin, remodelling collagen for scars, laxity and enlarged pores.</p>
       </div>
     </div>
   </div>
@@ -123,10 +210,13 @@
     <div class="services-grid">
 
       <div class="service-card" data-reveal>
-        <div class="service-media grad-1">Pico Laser</div>
+        <div class="service-media grad-1">
+          <img src="assets/services/pico-laser.png" alt="Pico Laser treatment" loading="lazy" onerror="this.remove()">
+          <!-- <span class="media-tag">Before</span> -->
+        </div>
         <div class="service-body">
           <h3>Pico Laser Therapy</h3>
-          <p>Targets pigmentation, melasma, acne scars &amp; tattoos with picosecond precision — less heat, faster healing.</p>
+          <p>Targets pigmentation, melasma, acne scars &amp; tattoos with picosecond precision: less heat, faster healing.</p>
           <ul>
             <li>Pigmentation &amp; melasma correction</li>
             <li>Tattoo &amp; freckle removal</li>
@@ -136,10 +226,13 @@
       </div>
 
       <div class="service-card" data-reveal>
-        <div class="service-media grad-2">Skin Analyser</div>
+        <div class="service-media grad-2">
+          <img src="assets/services/skin-analysis.jpeg" alt="AI Skin Analyser" loading="lazy" onerror="this.remove()">
+        </div>
+        
         <div class="service-body">
           <h3>AI-Powered Skin Analysis</h3>
-          <p>A 60-second scan reveals what the eye can't — guiding truly personalised skincare and treatment plans.</p>
+          <p>A 60-second scan reveals what the eye can't, guiding truly personalised skincare and treatment plans.</p>
           <ul>
             <li>Pore &amp; wrinkle mapping</li>
             <li>UV pigmentation detection</li>
@@ -149,7 +242,9 @@
       </div>
 
       <div class="service-card" data-reveal>
-        <div class="service-media grad-3">MNRF</div>
+        <div class="service-media grad-3">
+          <img src="assets/services/mnrf.jpeg" alt="MNRF microneedling treatment" loading="lazy" onerror="this.remove()">
+        </div>
         <div class="service-body">
           <h3>MNRF Microneedling</h3>
           <p>Combines microneedling with radiofrequency to remodel deeper skin layers for firmer, smoother skin.</p>
@@ -162,7 +257,9 @@
       </div>
 
       <div class="service-card" data-reveal>
-        <div class="service-media grad-4">Skin Care</div>
+        <div class="service-media grad-4">
+          <img src="assets/services/prp.png" alt="PRP treatment" loading="lazy" onerror="this.remove()">
+        </div>
         <div class="service-body">
           <h3>Medical &amp; Cosmetic Dermatology</h3>
           <p>Comprehensive care for acne, eczema, hair loss and general skin health alongside aesthetic treatments.</p>
@@ -178,16 +275,36 @@
   </div>
 </section>
 
-<!-- ===== Results / Process ===== -->
+<!-- ===== Conditions we treat ===== -->
+<section id="conditions" class="conditions">
+  <div class="container">
+    <p class="eyebrow center">Conditions We Treat</p>
+    <h2 class="center">Not Sure Which Treatment You Need?</h2>
+    <p class="center">Most patients arrive with a concern, not a treatment name. Book a consultation and Dr. Gupta will recommend the right plan.</p>
+    <ul class="condition-list">
+      <li>Acne &amp; acne scars</li>
+      <li>Pigmentation &amp; melasma</li>
+      <li>Hair loss &amp; thinning</li>
+      <li>Eczema &amp; dermatitis</li>
+      <li>Open pores &amp; uneven texture</li>
+      <li>Skin tightening &amp; ageing</li>
+      <li>Stretch marks</li>
+      <li>Unwanted tattoos &amp; freckles</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Process ===== -->
 <section id="results" class="results">
   <div class="container">
-    <p class="eyebrow center">The Process</p>
+    <p class="eyebrow center">How Treatment Works</p>
     <h2 class="center">Consistent, Data-Backed Results</h2>
     <div class="process-grid">
       <div class="process-step" data-reveal>
         <span class="step-num">01</span>
-        <h3>Digital Skin Scan</h3>
-        <p>Every visit starts with an AI skin analysis to establish a precise baseline.</p>
+        <h3>Skin Assessment</h3>
+        <p>Every visit begins with a skin assessment to understand your concerns and establish a baseline, 
+          with AI-assisted analysis for complex skin conditions.</p>
       </div>
       <div class="process-step" data-reveal>
         <span class="step-num">02</span>
@@ -208,9 +325,9 @@
 
     <div class="stats-strip" data-reveal>
       <div><strong>96%</strong><span>Patient Satisfaction</span></div>
-      <div><strong>15+</strong><span>Treatments Offered</span></div>
-      <div><strong>3</strong><span>Advanced Devices In-House</span></div>
-      <div><strong>8,500+</strong><span>Successful Sessions</span></div>
+      <div><strong>100+</strong><span>Treatments Offered</span></div>
+      <div><strong>10+</strong><span>Advanced Devices In-House</span></div>
+      <div><strong>1,500+</strong><span>Successful Sessions</span></div>
     </div>
   </div>
 </section>
@@ -218,88 +335,120 @@
 <!-- ===== Before & After Gallery =====
   To add real patient photos: drop images into assets/gallery/ using the exact
   filenames referenced below (e.g. pico-before.jpg, pico-after.jpg). Each photo
-  replaces its placeholder automatically — no other edits needed. Use only
+  replaces its placeholder automatically, no other edits needed. Use only
   photos you have explicit patient consent to publish. -->
 <section id="gallery" class="gallery">
   <div class="container">
-    <p class="eyebrow center">Real Patient Outcomes</p>
+    <p class="eyebrow center">Patient Outcomes</p>
     <h2 class="center">Before &amp; After Results</h2>
     <div class="gallery-grid">
 
       <div class="gallery-card" data-reveal>
         <div class="gallery-compare">
           <div class="gallery-media before grad-1">
-            <img src="assets/gallery/pico-before.jpg" alt="Before Pico Laser treatment" loading="lazy" onerror="this.remove()">
+            <img src="assets/gallery/pico-before.png" alt="Before Pico Laser treatment" loading="lazy" onerror="this.remove()">
             <span class="media-tag">Before</span>
           </div>
           <div class="gallery-media after grad-1">
-            <img src="assets/gallery/pico-after.jpg" alt="After Pico Laser treatment" loading="lazy" onerror="this.remove()">
+            <img src="assets/gallery/pico-after.png" alt="After Pico Laser treatment" loading="lazy" onerror="this.remove()">
             <span class="media-tag">After</span>
           </div>
         </div>
         <div class="gallery-caption">
           <h3>Pigmentation &amp; Melasma</h3>
-          <p>Pico Laser · 4 sessions</p>
+          <p>Pico Laser</p>
         </div>
       </div>
 
       <div class="gallery-card" data-reveal>
         <div class="gallery-compare">
           <div class="gallery-media before grad-3">
-            <img src="assets/gallery/mnrf-before.jpg" alt="Before MNRF Microneedling treatment" loading="lazy" onerror="this.remove()">
+            <img src="assets/gallery/mnrf-before.png" alt="Before MNRF Microneedling treatment" loading="lazy" onerror="this.remove()">
             <span class="media-tag">Before</span>
           </div>
           <div class="gallery-media after grad-3">
-            <img src="assets/gallery/mnrf-after.jpg" alt="After MNRF Microneedling treatment" loading="lazy" onerror="this.remove()">
+            <img src="assets/gallery/mnrf-after.png" alt="After MNRF Microneedling treatment" loading="lazy" onerror="this.remove()">
             <span class="media-tag">After</span>
           </div>
         </div>
         <div class="gallery-caption">
           <h3>Acne Scars &amp; Enlarged Pores</h3>
-          <p>MNRF Microneedling · 3 sessions</p>
+          <p>MNRF Microneedling</p>
         </div>
       </div>
 
       <div class="gallery-card" data-reveal>
         <div class="gallery-compare">
           <div class="gallery-media before grad-2">
-            <img src="assets/gallery/glow-before.jpg" alt="Before skin rejuvenation treatment" loading="lazy" onerror="this.remove()">
+            <img src="assets/gallery/carbon-before.png" alt="Before skin rejuvenation treatment" loading="lazy" onerror="this.remove()">
             <span class="media-tag">Before</span>
           </div>
           <div class="gallery-media after grad-2">
-            <img src="assets/gallery/glow-after.jpg" alt="After skin rejuvenation treatment" loading="lazy" onerror="this.remove()">
+            <img src="assets/gallery/carbon-after.png" alt="After skin rejuvenation treatment" loading="lazy" onerror="this.remove()">
             <span class="media-tag">After</span>
           </div>
         </div>
         <div class="gallery-caption">
-          <h3>Overall Skin Tone &amp; Glow</h3>
-          <p>AI-Guided Combination Therapy · 6 weeks</p>
+          <h3>Uneven Skin Tone &amp; Overall Glow</h3>
+          <p>Carbon Laser Peel</p>
         </div>
       </div>
 
     </div>
-    <p class="gallery-note">Results vary by individual. Photos shown are for illustration and will display once uploaded to <code>assets/gallery/</code>.</p>
+    <p class="gallery-note">Results vary from person to person. Images are published with patient consent.</p>
   </div>
 </section>
 
-<!-- ===== Testimonials ===== -->
+<!-- ===== Testimonials =====
+  Replace these with real, consented patient feedback, or remove the section
+  if you are unsure about medical advertising rules in your state. -->
 <section id="testimonials" class="testimonials">
   <div class="container">
     <p class="eyebrow center">Patient Stories</p>
     <h2 class="center">What Patients Say</h2>
     <div class="testimonial-track">
       <div class="testimonial-card" data-reveal>
-        <p>"The AI skin analysis showed me things about my skin no one had explained before. The Pico Laser sessions cleared my pigmentation in just a few sittings!"</p>
-        <div class="testimonial-author"><span class="avatar">P</span><div><strong>Priya S.</strong><small>Pico Laser Patient</small></div></div>
+        <p>"I had been suffering from eczema for quite some time and was struggling with severe itching, redness, and skin irritation. I had consulted multiple doctors before, but unfortunately, my condition only kept getting worse despite trying different treatments. but after  consulting Dr. Vinod Gupta, I finally got the right treatment. The doctor listened patiently to my concerns, explained the condition clearly, and prescribed effective treatment and finally my skin condition is much better now."</p>
+        <div class="testimonial-author"><span class="avatar">P</span><div><strong>Himanshi S.</strong><small>Eczema Patient</small></div></div>
       </div>
       <div class="testimonial-card" data-reveal>
-        <p>"MNRF microneedling completely transformed my acne scars. Dr. Gupta explained every step and the results after 3 sessions are incredible."</p>
-        <div class="testimonial-author"><span class="avatar">R</span><div><strong>Rohan M.</strong><small>MNRF Patient</small></div></div>
+        <p>"⭐⭐⭐⭐⭐ I had a wonderful experience at this skin clinic and would highly recommend it to everyone.
+The doctor was very professional, knowledgeable and took time to understand my concerns properly and I feel comfort in every visit. The staff is extremely friendly, polite and supportive during every visit. The clinic is clean, hygienic, modern, and has a very pleasant and welcoming atmosphere.
+I truly appreciated the personalised attention and genuine advice provided by the doctor. Thank you to the doctor for your excellent care and dedication. Overall, this is a highly recommended skin clinic for anyone looking for quality skincare and professional service. ⭐⭐⭐⭐⭐"</p>
+        <div class="testimonial-author"><span class="avatar">R</span><div><strong>Amrita S.</strong><small>Skin Analysis Patient</small></div></div>
       </div>
       <div class="testimonial-card" data-reveal>
-        <p>"Genuinely the most modern clinic I've visited. The technology-driven approach makes you trust the process. Highly recommend!"</p>
-        <div class="testimonial-author"><span class="avatar">A</span><div><strong>Anita D.</strong><small>Skin Analysis Patient</small></div></div>
+        <p>"I had an excellent experience with Tersi Clinic for their laser skin treatment. The entire team is highly professional, friendly, and attentive, and they made me feel comfortable throughout the process.
+The laser facility is excellent, with modern equipment and a very professional approach. I was impressed by the care, hygiene, and attention to detail provided by the staff. They explained the procedure clearly and made sure all my concerns were addressed.
+I’m very happy with the results and would definitely recommend Tersi Clinic to anyone looking for quality skin laser treatments. Truly a great experience and excellent service!!"</p>
+        <div class="testimonial-author"><span class="avatar">A</span><div><strong>Reni J.</strong><small>Laser Treatment Patient</small></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== (edit the answers so they match how your clinic actually works) -->
+<section id="faq" class="faq">
+  <div class="container">
+    <p class="eyebrow center">Before Your Visit</p>
+    <h2 class="center">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <details>
+        <summary>What happens at my first visit?</summary>
+        <p>Dr. Gupta will ask about your skin concerns and history, examine your skin, and run an AI skin scan if it helps. You will leave with a treatment plan and an estimate before any treatment begins.</p>
+      </details>
+      <details>
+        <summary>How many sessions will I need?</summary>
+        <p>It depends on your concern and skin type. Pigmentation and scars usually need a series of sessions. Dr. Gupta will give you an estimate at your consultation.</p>
+      </details>
+      <details>
+        <summary>Is there downtime after laser or MNRF treatment?</summary>
+        <p>Pico Laser usually has minimal downtime. MNRF can cause mild redness for a day or two. You will be told what to expect for your skin, and given aftercare instructions, before you leave.</p>
+      </details>
+      <details>
+        <summary>How much do treatments cost?</summary>
+        <p>Cost depends on the treatment and the number of sessions. You will get a clear estimate after your consultation.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -308,14 +457,25 @@
 <section id="contact" class="contact">
   <div class="container contact-grid">
     <div class="contact-info" data-reveal>
-      <p class="eyebrow">Get in Touch</p>
+      <p class="eyebrow">Find Us</p>
       <h2>Book Your Consultation Today</h2>
-      <p>Have a question about a treatment or want to schedule your first AI skin analysis? Reach out — we'd love to help.</p>
+      <p>Have a question about a treatment or want to schedule your first skin analysis? Call, message us on WhatsApp, or send a request and we will confirm your slot.</p>
       <div class="contact-details">
-        <div><strong>📍 Clinic</strong><span>102, Skinlight Tower, MG Road, Bengaluru</span></div>
-        <div><strong>📞 Phone</strong><span>+91 8123512696</span></div>
-        <div><strong>✉️ Email</strong><span>hello@drguptaskin.com</span></div>
-        <div><strong>🕐 Hours</strong><span>Mon–Sun <ul><li>morning: 10:00 AM – 1:30 PM</li><li>evening: 6:00 PM - 10:30 PM</li></ul></span></div>
+        <div><strong>📍 Clinic</strong><span><a href="https://www.google.com/maps/search/?api=1&amp;query=+Tersi+Clinic+-+Skin,+Hair+%26+Laser,+near+shiv+sena+branch,+opposite+to+90's+cake+shop,+Ishwarnagar,+Bhola+Nagar,+Kalwa,+Navi+Mumbai,+Maharashtra+400708" target="_blank" rel="noopener">Tersi Clinic, Navi Mumbai, Maharashtra</a></span></div>
+        <div><strong>📞 Phone</strong><span><a href="tel:+918123512696">+91 8123512696</a></span></div>
+        <div><strong>✉️ Email</strong><span><a href="mailto:vinod369ii@gmail.com">vinod369ii@gmail.com</a></span></div>
+        <div><strong>🕐 Hours</strong><span>Open daily<br>10:00 AM to 1:30 PM<br>6:00 PM to 10:30 PM</span></div>
+      </div>
+      <div class="contact-actions">
+        <a href="tel:+918123512696" class="btn btn-primary">Call the Clinic</a>
+        <a href="https://wa.me/918123512696?text=Hi%2C%20I%27d%20like%20to%20book%20a%20consultation." class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+      <div class="map-wrap">
+        <!-- <iframe title="Map showing Tersi Clinic in Navi Mumbai" 
+        src="https://maps.google.com/maps?q=+Tersi+Clinic+-+Skin,+Hair+%26+Laser,+near+shiv+sena+branch,+opposite+to+90's+cake+shop,+Ishwarnagar,+Bhola+Nagar,+Kalwa,+Navi+Mumbai,+Maharashtra+400708&amp;output=embed"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.2364538554084!2d72.9940488755886!3d19.184872048544864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bfde6496fc6f%3A0x23195f42e77bdcf8!2sTersi%20Clinic%20-%20Skin%2C%20Hair%20%26%20Laser!5e0!3m2!1sen!2sin!4v1792684102540!5m2!1sen!2sin" width="600" height="450" style="border:0;" 
+        allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </div>
     <form class="contact-form" id="contactForm" data-reveal>
@@ -331,15 +491,49 @@
       </div>
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" placeholder="Enter your email (optional)" />
       </div>
       <div class="form-group">
         <label for="treatment">Interested In</label>
         <select id="treatment" name="treatment">
+          <option>General Consultation</option>
+          <option>Acne &amp; Acne Scars</option>
+          <option>Pigmentation &amp; Melasma</option>
+          <option>Hair Loss</option>
           <option>Pico Laser</option>
           <option>AI Skin Analysis</option>
           <option>MNRF Microneedling</option>
-          <option>General Consultation</option>
+          <option>Follow-up</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Preferred date</label>
+        <input type="date" id="date" name="date" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="time">Preferred time</label>
+        <select id="time" name="time" class="form-control" required>
+          <option value="">Select Time</option>
+          <optgroup label="Morning">
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="10:30 AM">10:30 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="11:30 AM">11:30 AM</option>
+            <option value="12:00 PM">12:00 PM</option>
+            <option value="12:30 PM">12:30 PM</option>
+            <option value="01:00 PM">01:00 PM</option>
+          </optgroup>
+          <optgroup label="Evening">
+            <option value="06:00 PM">06:00 PM</option>
+            <option value="06:30 PM">06:30 PM</option>
+            <option value="07:00 PM">07:00 PM</option>
+            <option value="07:30 PM">07:30 PM</option>
+            <option value="08:00 PM">08:00 PM</option>
+            <option value="08:30 PM">08:30 PM</option>
+            <option value="09:00 PM">09:00 PM</option>
+            <option value="09:30 PM">09:30 PM</option>
+            <option value="10:00 PM">10:00 PM</option>
+          </optgroup>
         </select>
       </div>
       <div class="form-group">
@@ -356,15 +550,20 @@
 <footer class="footer">
   <div class="container footer-grid">
     <div>
-      <a href="#home" class="logo">Dr. Vinod <span>Gupta</span></a>
-      <p>Advanced dermatology and aesthetic care powered by modern technology.</p>
+      <a href="#home" class="logo">Tersi Clinic</a>
+      <p>Advanced cosmetology and aesthetic care powered by modern technology. <br>Led by Dr. Vinod Gupta.</p>
+      <address class="footer-address">
+        Tersi Clinic - Skin, Hair & Laser, Navi Mumbai, Maharashtra<br>
+        <a href="tel:+918123512696">+91 8123512696</a>
+      </address>
     </div>
     <div>
       <h4>Quick Links</h4>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#clinic">The Clinic</a></li>
         <li><a href="#services">Treatments</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -374,24 +573,39 @@
         <li><a href="#services">Pico Laser</a></li>
         <li><a href="#services">AI Skin Analysis</a></li>
         <li><a href="#services">MNRF Microneedling</a></li>
+        <li><a href="#conditions">Acne, Pigmentation &amp; Hair Loss</a></li>
       </ul>
     </div>
-    <div>
+    <!-- <div>
       <h4>Follow</h4>
       <div class="social-links">
+       
         <a href="#" aria-label="Instagram">IG</a>
         <a href="#" aria-label="Facebook">FB</a>
         <a href="#" aria-label="LinkedIn">IN</a>
       </div>
-    </div>
+    </div> -->
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2026 Dr. Vinod Gupta Skin Clinic. All rights reserved.</p>
+    <p>&copy; 2026 Tersi Clinic. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- Mobile-only call and WhatsApp bar -->
+<div class="mobile-cta">
+  <a href="tel:+918123512696" class="mc-call">Call</a>
+  <a href="https://wa.me/918123512696?text=Hi%2C%20I%27d%20like%20to%20book%20a%20consultation." class="mc-wa" target="_blank" rel="noopener">WhatsApp</a>
+</div>
 
 <a href="#home" id="backToTop" aria-label="Back to top">↑</a>
 
 <script src="js/script.js"></script>
+<script>
+  // Stop patients picking a date in the past
+  (function () {
+    var d = document.getElementById('date');
+    if (d) d.min = new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  })();
+</script>
 </body>
 </html>

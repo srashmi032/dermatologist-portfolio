@@ -3,7 +3,9 @@
   --color-surface: #ffffff;
   --color-primary: #0f6e6b;
   --color-primary-dark: #0a4f4d;
-  --color-accent: #d99a6c;
+ 
+  /* --color-accent: #d99a6c; */
+  --color-accent: #801c44;
   --color-text: #1f2a2a;
   --color-text-soft: #5a6666;
   --color-border: #e7e2dc;
@@ -105,8 +107,51 @@ header#header.scrolled { border-color: var(--color-border); box-shadow: var(--sh
   justify-content: space-between;
   padding: 18px 24px;
 }
-.logo { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--color-primary-dark); }
+.logo { display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-heading); font-size: 2.3rem; font-weight: 700; color: var(--color-primary-dark); 
+ }
+
 .logo span { color: var(--color-accent); }
+/* .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+} */
+
+.logo-mark {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: block;
+  box-sizing: border-box;
+  object-fit: contain;
+  background: #faf8f6;           /* navbar color */
+  mix-blend-mode: multiply;
+}
+
+.logo-text em {
+  font-style: normal;
+  color: #d4a373;          /* match your existing accent color for "Clinic" */
+}
+
+.logo-tagline {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b7b79;
+  padding-left: 12px;
+  border-left: 1px solid #d9d4cf;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .logo-tagline { display: none; }   /* keeps the nav from getting crowded */
+}
 #nav ul { display: flex; gap: 32px; }
 #nav a {
   font-size: 0.92rem; font-weight: 500; color: var(--color-text);
@@ -246,8 +291,14 @@ h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); }
 }
 .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 .service-media {
-  height: 160px; display: flex; align-items: center; justify-content: center;
+  height: 160px; display: flex; align-items: center; justify-content: center; overflow: hidden;
   color: #fff; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600;
+}
+.service-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .grad-1 { background: linear-gradient(135deg, #0f6e6b, #17a39e); }
 .grad-2 { background: linear-gradient(135deg, #d99a6c, #e8b98d); }
