@@ -109,7 +109,7 @@ header#header.scrolled { border-color: var(--color-border); box-shadow: var(--sh
 }
 .logo { display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 10px; 
   font-family: var(--font-heading); font-size: 2.3rem; font-weight: 700; color: var(--color-primary-dark); 
  }
 
@@ -121,20 +121,16 @@ header#header.scrolled { border-color: var(--color-border); box-shadow: var(--sh
 } */
 
 .logo-mark {
-  width: 60px;
-  height: 60px;
+  width: auto;
+  height: 52px;
   flex-shrink: 0;
   display: block;
   box-sizing: border-box;
   object-fit: contain;
-  background: #faf8f6;           /* navbar color */
-  mix-blend-mode: multiply;
+  background:transparent;           /* navbar color */
+  mix-blend-mode: normal;
 }
 
-.logo-text em {
-  font-style: normal;
-  color: #d4a373;          /* match your existing accent color for "Clinic" */
-}
 .logo-text { color: var(--color-primary-dark); }
 
 .logo-text span { color: var(--color-accent); }
@@ -153,7 +149,6 @@ header#header.scrolled { border-color: var(--color-border); box-shadow: var(--sh
   text-transform: uppercase;
   color: #6b7b79;
   padding-left: 12px;
-  border-left: 1px solid #d9d4cf;
   line-height: 1.2;
   white-space: nowrap;
 }
@@ -163,7 +158,8 @@ header#header.scrolled { border-color: var(--color-border); box-shadow: var(--sh
 } */
 @media (max-width: 768px) {
   .logo { font-size: 1.5rem; gap: 8px; }
-  .logo-mark { width: 44px; height: 44px; }
+  /* .logo-mark { width: 44px; height: 44px; } */
+  .logo-mark { height: 44px; }
   .logo-tagline { font-size: 0.55rem; letter-spacing: 0.08em; }
 }
 #nav ul { display: flex; gap: 32px; }
