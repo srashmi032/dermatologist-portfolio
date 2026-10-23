@@ -48,6 +48,25 @@ function setActiveLink() {
 window.addEventListener('scroll', setActiveLink);
 setActiveLink();
 
+//send Email via Gmail app or web
+function openGmail(email) {
+  const recipient = encodeURIComponent(email);
+  const gmailWeb =
+    `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}`;
+
+  if (/Android/i.test(navigator.userAgent)) {
+    window.location.href =
+      `intent:mailto:${recipient}#Intent;` +
+      `action=android.intent.action.SENDTO;` +
+      `package=com.google.android.gm;` +
+      `S.browser_fallback_url=${encodeURIComponent(gmailWeb)};end`;
+  } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    window.location.href = `googlegmail:///co?to=${recipient}`;
+  } else {
+    window.open(gmailWeb, "_blank", "noopener,noreferrer");
+  }
+}
+
 // Reveal on scroll
 const revealEls = document.querySelectorAll('[data-reveal]');
 const observer = new IntersectionObserver((entries) => {
