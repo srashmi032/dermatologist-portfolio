@@ -19,7 +19,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 
 body {
   font-family: var(--font-body);
@@ -113,7 +113,7 @@ header#header.scrolled { border-color: var(--color-border); box-shadow: var(--sh
   font-family: var(--font-heading); font-size: 2.3rem; font-weight: 700; color: var(--color-primary-dark); 
  }
 
-.logo span { color: var(--color-accent); }
+/* .logo span { color: var(--color-accent); } */
 /* .logo {
   display: flex;
   align-items: center;
@@ -135,6 +135,15 @@ header#header.scrolled { border-color: var(--color-border); box-shadow: var(--sh
   font-style: normal;
   color: #d4a373;          /* match your existing accent color for "Clinic" */
 }
+.logo-text { color: var(--color-primary-dark); }
+
+.logo-text span { color: var(--color-accent); }
+
+.logo-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
 
 .logo-tagline {
   font-family: "Poppins", sans-serif;
@@ -149,8 +158,13 @@ header#header.scrolled { border-color: var(--color-border); box-shadow: var(--sh
   white-space: nowrap;
 }
 
-@media (max-width: 1100px) {
-  .logo-tagline { display: none; }   /* keeps the nav from getting crowded */
+/* @media (max-width: 1100px) {
+  .logo-tagline { display: none; }   /* keeps the nav from getting crowded 
+} */
+@media (max-width: 768px) {
+  .logo { font-size: 1.5rem; gap: 8px; }
+  .logo-mark { width: 44px; height: 44px; }
+  .logo-tagline { font-size: 0.55rem; letter-spacing: 0.08em; }
 }
 #nav ul { display: flex; gap: 32px; }
 #nav a {
@@ -173,7 +187,8 @@ header#header.scrolled { border-color: var(--color-border); box-shadow: var(--sh
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 90px;
+  /* padding-top: 90px; */
+  padding-top: calc(var(--header-h) + 24px);
   overflow: hidden;
 }
 .hero-bg {
@@ -458,4 +473,7 @@ h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); }
   .gallery-compare { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .hero-stats { gap: 24px; }
+  .logo-mark { width: 44px; height: 44px; }
+  .nav-wrap { padding-top: 8px; padding-bottom: 8px; }
+  :root { --header-h: 72px; }
 }
